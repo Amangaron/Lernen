@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+
+    const band = {
+        name: "Coldplay",
+        nationality: "Great Britain",
+        genre: "Alternative, Pop, Rock",
+        members: [],
+        formed: 1998,
+        split: false,
+        albums: [
+            {name: "Early Years", released: 1998},
+            {name: "Parachutes", released: 2000},
+            {name: "A rush of blood to the head", released: 2002},
+            {name: "X&Y", released: 2005},
+            {name: "Viva la Vida", released: 2008},
+            {name: "Mylo Xyloto", released: 2011},
+            {name: "Ghost Stories", released: 2014},
+            {name: "A head full of dreams", released: 2015},
+            {name: "Everyday Life", released: 2019},
+        ]
+    }
+
+    bandInfo = `The ${band.genre} band ${band.name} from ${band.nationality} started ${band.formed} their carreer. They produced ${band.albums.length} albums: `;
+    for (let i = 0; i < band.albums.length; i++) {
+        if (i === band.albums.length - 1) {
+            bandInfo += `and ${band.albums[i].name} (${band.albums[i].released}).`;
+        } else {
+            bandInfo += `${band.albums[i].name} (${band.albums[i].released}), `;
+        }
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>

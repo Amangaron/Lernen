@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 4</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    function Cat(name, breed, color) {
+      this.name = name;
+      this.breed = breed;
+      this.color = color;
+
+      this.greeting = function () {
+        console.log(`Hello, said ${this.name} the ${this.breed}.`);
+      };
+    }
+    const cat1 = new Cat("Bertie", "Cymric", "white");
+    const cat2 = new Cat("Tenja", "Wildcat", "grey washed");
+
+    // Add your code here
+
+    let catName = cat1["name"];
+    cat1.greeting();
+    cat2.greeting();
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+
+    para1.textContent = `The cat's name is ${ catName }.`;
+    para2.textContent = `${ catName }'s color is ${ cat1.color }.`;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
