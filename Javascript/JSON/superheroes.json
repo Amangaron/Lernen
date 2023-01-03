@@ -36,6 +36,18 @@
           "Teleportation",
           "Interdimensional travel"
         ]
+      },
+      {
+        "name" : "Amangaron",
+        "age" : 990000,
+        "secretIdentity" : "Dominic Huster",
+        "powers" : [
+          "Coding",
+          "Destroying",
+          "Annoying",
+          "Talking, Talking, Talking... well",
+          "sometimes listening"
+        ]
       }
     ]
   }
