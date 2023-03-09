@@ -23,11 +23,14 @@
 
         async function populate() {
 
-          const requestURL = 'https://github.com/Amangaron/Lernen/blob/69c5acfedf13c2a809e985e80a7371787c8ac07e/Javascript/JSON/superheroes.json';
+          const requestURL = 'https://raw.githubusercontent.com/Amangaron/Lernen/2685ac9e1b812455ee007633861fbd894ed6ed9e/Javascript/JSON/superheroes.json';
           const request = new Request(requestURL);
 
           const response = await fetch(request);
-          const superHeroes = await response.json();
+          const superHeroesText = await response.text();
+          const superHeroes = JSON.parse(superHeroesText);
+
+          let myJSON = JSON.stringify(superHeroes);
 
           populateHeader(superHeroes);
           populateHeroes(superHeroes);
